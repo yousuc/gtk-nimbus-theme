@@ -6,20 +6,20 @@ PanelWidget,
 PanelApplet,
 PanelToplevel 
 {
-    	border-image: none;
-    	background-image: -gtk-gradient(linear, left top, left bottom,
+        border-image: none;
+        background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.12)),
                                      to (shade(@theme_bg_color, 0.88)));
 
-    	padding: 0;
-    	color: @theme_fg_color;
+        padding: 0;
+        color: @theme_fg_color;
 
-	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+    text-shadow: 0 1px shade (@theme_bg_color, 1.02);
 }
 
 PanelApplet 
 {
-    	border-width: 0;
+        border-width: 0;
 }
 
 PanelSeparator {
@@ -42,7 +42,7 @@ PanelMenuBar.menubar.menuitem {
                                      from (shade(@theme_bg_color, 1.12)),
                                      to (shade(@theme_bg_color, 0.88)));
 
-	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+    text-shadow: 0 1px shade (@theme_bg_color, 1.02);
 }
 
 PanelAppletFrame { 
@@ -56,20 +56,20 @@ PanelAppletFrame {
 
 PanelApplet .button 
 {
-    	padding: 0;
-    	-GtkButton-inner-border: 2;
+        padding: 0;
+        -GtkButton-inner-border: 2;
 
-    	background-image: -gtk-gradient(linear, left top, left bottom,
+        background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.12)),
                                      to (shade(@theme_bg_color, 0.88)));
 
-    	border-color: shade(@theme_bg_color, 0.7);
-    	border-radius: 0;
-    	border-width: 0 1px 0 1px;
-    	color: @theme_fg_color;
-	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+        border-color: shade(@theme_bg_color, 0.7);
+        border-radius: 0;
+        border-width: 0 1px 0 1px;
+        color: @theme_fg_color;
+    text-shadow: 0 1px shade (@theme_bg_color, 1.02);
 
-    	box-shadow: none;
+        box-shadow: none;
 }
 
 PanelApplet .button:prelight:active,
@@ -134,7 +134,7 @@ PanelApplet .button:active:selected {
 }
 
 ClockBox {
-	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+    text-shadow: 0 1px shade (@theme_bg_color, 1.02);
 }
 
 WnckPager, WnckTasklist {
@@ -170,7 +170,7 @@ NautilusWindow .sidebar .view {
 
     /*background-color: @bg_color;*/
 
-	color: shade (@bg_color, 0.55);
+    color: shade (@bg_color, 0.55);
     text-shadow:  0 1px shade (shade (@theme_bg_color, 0.95), 1.05); 
 }
 
