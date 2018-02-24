@@ -1,0 +1,114 @@
+/*******************
+ * check and radio *
+ *******************/
+.check row:selected,
+.check,
+.check row{
+	-gtk-icon-source: url("assets/buttons/check/unchecked.png");
+}
+
+.check row:selected:hover,
+.check:hover,
+.check row:hover{
+	-gtk-icon-source: url("assets/buttons/check/unchecked-hover.png");
+}
+
+.check,
+.check row{
+	border-radius: 2px;
+}
+.check:checked,
+.check row:selected:checked,
+.check row:selected:focused:checked,
+.notebook .check:checked{
+	-gtk-icon-source: url("assets/buttons/check/checked.png");
+}
+.check:checked:hover,
+.check row:selected:checked:hover,
+.check row:selected:focused:checked:hover,
+.notebook .check:checked:hover{
+	-gtk-icon-source: url("assets/buttons/check/checked-hover.png");
+}
+
+.check row:selected:inconsistent,
+.check:inconsistent,
+.check row:inconsistent{
+	-gtk-icon-source: url("assets/buttons/check/unchecked-mixed.png");
+}
+
+.check row:selected,
+.check row:selected:checked,
+.check row:selected:focused,
+.check row:selected:focused:checked{
+	-unico-outer-stroke-color: @transparent;
+	-unico-outer-stroke-gradient: none;
+}
+.check:insensitive{
+	-gtk-icon-source: url("assets/buttons/check/unchecked-insensitive.png");
+}
+.check:insensitive:checked{
+	-gtk-icon-source: url("assets/buttons/check/checked-insensitive.png");
+}
+.check:insensitive:inconsistent{
+	-gtk-icon-source: url("assets/buttons/check/unchecked-insensitive-mixed.png");
+}
+
+/* radio 																*/
+.radio row:selected,
+.radio,
+.radio row{
+	-gtk-icon-source: url("assets/buttons/radio/unselected.png");
+}
+
+.radio row:selected:hover,
+.radio:hover,
+.radio row:hover{
+	-gtk-icon-source: url("assets/buttons/radio/unselected-hover.png");
+}
+
+.radio,
+.radio row{
+	border-radius: 10px;
+}
+.notebook .radio:checked,
+.radio:checked,
+.radio row:selected:checked,
+.radio row:selected:focused:checked{
+	-gtk-icon-source: url("assets/buttons/radio/selected.png");
+}
+.notebook .radio:checked:hover,
+.radio:checked:hover,
+.radio row:selected:checked:hover,
+.radio row:selected:focused:checked:hover{
+	-gtk-icon-source: url("assets/buttons/radio/selected-hover.png");
+}
+
+.radio row:selected:inconsistent,
+.radio:inconsistent,
+.radio row:inconsistent{
+	-gtk-icon-source: url("assets/buttons/radio/unselected-mixed.png");
+}
+
+.radio row:selected,
+.radio row:selected:checked,
+.radio row:selected:focused,
+.radio row:selected:focused:checked{
+	-unico-outer-stroke-color: @transparent;
+	-unico-outer-stroke-gradient: none;
+}
+.radio:insensitive{
+	-gtk-icon-source: url("assets/buttons/radio/unselected-insensitive.png");
+}
+.radio:insensitive:checked{
+	-gtk-icon-source: url("assets/buttons/radio/selected-insensitive.png");
+}
+.radio:insensitive:inconsistent{
+	-gtk-icon-source: url("assets/buttons/radio/unselected-insensitive-mixed.png");
+}
+
+/***************
+ * resize grip *
+ ***************/
+.grip {
+    -gtk-icon-source: url("assets/resize-grip.png");
+}

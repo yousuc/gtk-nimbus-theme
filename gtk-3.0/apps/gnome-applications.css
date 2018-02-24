@@ -1,0 +1,284 @@
+@define-color notebook_tab_gradient_b shade (@bg_color, 0.98);
+/***********************
+ * fallback mode panel *
+ ***********************/
+PanelWidget,
+PanelApplet,
+PanelToplevel 
+{
+    	border-image: none;
+    	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.88)));
+
+    	padding: 0;
+    	color: @theme_fg_color;
+
+	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+}
+
+PanelApplet 
+{
+    	border-width: 0;
+}
+
+PanelSeparator {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.88)));
+
+    border-width: 0;
+    color: @theme_fg_color;
+}
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem {
+    -PanelMenuBar-icon-visible: true;
+
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.88)));
+
+	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+}
+
+PanelAppletFrame { 
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.88)));
+
+    background-color: @theme_bg_color;
+    border-width: 0;
+}
+
+PanelApplet .button 
+{
+    	padding: 0;
+    	-GtkButton-inner-border: 2;
+
+    	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.88)));
+
+    	border-color: shade(@theme_bg_color, 0.7);
+    	border-radius: 0;
+    	border-width: 0 1px 0 1px;
+    	color: @theme_fg_color;
+	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+
+    	box-shadow: none;
+}
+
+PanelApplet .button:prelight:active,
+PanelApplet .button:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 0.85)),
+                                     to (shade(@theme_bg_color, 1.0))); 
+
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    text-shadow: none;
+}
+
+PanelApplet .button:prelight {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.2)),
+                                     to (shade(@theme_bg_color, 1.0)));
+
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    text-shadow: none;
+}
+
+PanelApplet .button:selected {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.65)),
+                                     to (shade(@theme_bg_color, 1.45)));
+
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    text-shadow: none;
+}
+
+PanelApplet .button:focused {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.65)),
+                                     to (shade(@theme_bg_color, 1.45)));
+
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    text-shadow: none;
+}
+
+PanelApplet .button:active:selected {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.65)),
+                                     to (shade(@theme_bg_color, 1.45)));
+
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    text-shadow: none;
+}
+
+ClockBox {
+	text-shadow: 0 1px shade (@theme_bg_color, 1.02);
+}
+
+WnckPager, WnckTasklist {
+    background-color: @theme_bg_color;
+}
+
+/************
+ * nautilus *
+ ************/
+
+NautilusWindow * {
+    -GtkPaned-handle-size: 1;
+    border-width: 0px;
+}
+
+.nautilus-canvas-item {
+    border-radius: 3px;
+}
+
+NautilusWindow .button
+{
+    border-width: 1px;
+}
+
+NautilusWindow .entry
+{
+    border-width: 1px;
+}
+
+NautilusWindow .sidebar,
+NautilusWindow .sidebar .view {
+    background-color: #e2e2e2;
+
+    /*background-color: @bg_color;*/
+
+	color: shade (@bg_color, 0.55);
+    text-shadow:  0 1px shade (shade (@theme_bg_color, 0.95), 1.05); 
+}
+
+NautilusWindow .sidebar .view:selected,
+NautilusWindow .sidebar .view:prelight:selected 
+{
+    color: @theme_selected_fg_color;
+    text-shadow: none; 
+}
+
+/* desktop mode */
+.nautilus-desktop.nautilus-canvas-item {
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    background-color: alpha(@theme_bg_color, 0.8);
+    background-image: none;
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    background-color: #cccccc;
+    background-image: none;
+    color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+/* browser window */
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@info_bg_color, 1.03)),
+                                     to (shade(@info_bg_color, 1.03)));
+
+    border-color: shade(@info_bg_color, 0.7);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+}
+
+.nautilus-cluebar-label {
+    font: bold;
+    color: @info_fg_color;
+}
+
+NautilusLocationEntry.entry {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+NautilusQueryEditor .button,
+NautilusQueryEditor .button:focus,
+NautilusQueryEditor .button:active,
+NautilusQueryEditor .button:active:focus,
+NautilusSearchBar .entry,
+NautilusSearchBar .entry:focus {
+    border-color: darker(@info_bg_color);
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* inactive pane */
+.nautilus-inactive-pane .view {
+    background-color: shade(@theme_base_color, 0.9);
+}
+
+/* pane separator */
+NautilusWindow .pane-separator {
+    background-color: shade(@theme_bg_color, 0.8);
+    border-style: none;
+    border-width: 0px;
+}
+
+.toolbar.menubar NautilusPathBar.linked .button, 
+.toolbar.menubar NautilusPathBar .button 
+{
+       transition: none;
+}
+
+/******************
+ * gnome terminal *
+ ******************/
+TerminalScreen {
+    background-color: @dark_shadow;
+    color: @base_color;
+    -TerminalScreen-background-darkness: 0.8;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+/***********************
+ * gnome control center *
+ ***********************/
+CcShellItemView.view {
+    background-color: shade (@theme_bg_color, 0.93);
+}

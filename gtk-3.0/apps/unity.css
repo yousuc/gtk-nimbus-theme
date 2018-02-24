@@ -1,0 +1,133 @@
+/* Decorations */
+
+UnityDecoration {
+    -UnityDecoration-extents: 24px 1px 1px 1px;
+    -UnityDecoration-input-extents: 10px;
+
+    -UnityDecoration-shadow-offset-x: 1px;
+    -UnityDecoration-shadow-offset-y: 5px;
+    -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.75);
+    -UnityDecoration-active-shadow-radius: 30px;
+    -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.3);
+    -UnityDecoration-inactive-shadow-radius: 25px;
+
+    -UnityDecoration-glow-size: 10px;
+    -UnityDecoration-glow-color: rgb (221, 72, 20);
+
+    -UnityDecoration-title-indent: 10px;
+    -UnityDecoration-title-fade: 35px;
+    -UnityDecoration-title-alignment: 0.5;
+}
+
+UnityDecoration.top {
+    border: 1px solid #2b2e33; /* shade (@dark_bg_color, 1.04) - shade (@dark_bg_color, 1.5) */
+    border-bottom-width: 0px;
+    border-radius: 3px 3px 0px 0px;
+    padding: 1px 3px 0 2px;
+
+    box-shadow: inset 1px 0px #dddfe3,
+                inset 0px 1px #f0f1f2,
+                inset -1px 0px #dddfe3,
+                inset 0px -1px #888b90;
+
+    background-color: #2b2e33;
+    /*background-clip: border-box;*/
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (#e3e5e8),
+        color-stop (0.7, #aaafb9),
+        to (#aaafb9));
+
+    color: #000000;
+    text-shadow: none;  
+	/*text-shadow: 1px 0 #333, -1px 0 #333, 0 1px #333, 0 -1px #333;*/
+}
+
+UnityDecoration.top:backdrop {
+    border: 1px solid #888d97;
+    border-bottom-width: 0;
+    background-color: transparent;
+    /*background-clip: border-box;*/
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (#abafb8),
+        to (#c0c4cb));
+     box-shadow: inset 0px -1px #888b90;
+    color: #787d8b;
+}
+
+UnityDecoration.left,
+UnityDecoration.right,
+UnityDecoration.bottom {
+    background-color: #2b2e33;
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (#2b2e33),
+        to (#2b2e33));
+}
+
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+    background-color: #888d97;
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (#888d97),
+        to (#888d97));
+}
+
+/* Panel Style */
+
+UnityPanelWidget,
+.unity-panel {
+    background-color: shade(@theme_bg_color, 0.938);
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (#f9fafb),
+        color-stop (0.35, #dedfe4),
+        color-stop (0.36, #dfe0e5),
+        to (#e8e9ed));
+       	border-top-color: #eeeff2;
+   	border-right-color: #dedfe4;
+   	border-left-color: #dedfe4;
+   	border-bottom-color: #9ea3ad;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    color: @theme_text_color;
+    text-shadow: none;	
+    /*text-shadow: 1px 0 #333, -1px 0 #333, 0 1px #333, 0 -1px #333;*/
+}
+
+UnityPanelWidget:backdrop,
+.unity-panel:backdrop {
+    color: #807d78;
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 1px 1px 0 1px;
+    icon-shadow: 0 -1px shade (@dark_bg_color, 0.7);
+}
+
+.unity-panel.menubar:backdrop,
+.unity-panel .menubar *:backdrop {
+    color: @backdrop_dark_fg_color;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover {
+    background-color: #F7F7F7;
+}
